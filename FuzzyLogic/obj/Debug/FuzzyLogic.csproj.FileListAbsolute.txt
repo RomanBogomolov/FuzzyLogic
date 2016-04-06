@@ -1,0 +1,6 @@
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.exe.config
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.exe
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.pdb
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.csprojResolveAssemblyReference.cache
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.exe
+C:\Users\bogomolov_rv\Desktop\FuzzyLogic\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.pdb
