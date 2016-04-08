@@ -36,7 +36,6 @@ namespace FuzzyLogic
                 for (int j = 0; j < size; j++)
                     if (arr[i].skill[j] < min[j])
                         min[j] = arr[i].skill[j];
-
             m = min;
 
             return min;

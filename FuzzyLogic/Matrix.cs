@@ -19,12 +19,9 @@ namespace FuzzyLogic
             double[,] matrixConvert = new double[ROWS,COLUMNS];
             ROWS = rows;
             COLUMNS = columns;
-            //matrix = new double[ROWS][COLUMNS];
-            matrix = matrixConvert.Cast<double>().ToArray()
-                        .Select((it, ix) => new { item = it, index = ix })
-                        .GroupBy(it => it.index / (matrixConvert.GetUpperBound(0) + 1), it => it.item)
-                        .Select(it => it.ToArray()).ToArray();
 
+            matrix = new double[ROWS][];
+           
         }
 
         public Matrix(double[][] m)
@@ -48,6 +45,8 @@ namespace FuzzyLogic
 
             double[][] A = this.getMatrix();
             double[][] B = M.getMatrix();
+            double[,] C1 = new double[ROWS,COLUMNS];
+
             double[][] C = new double[ROWS][];
 
             int thisRows = this.ROWS;
@@ -60,7 +59,9 @@ namespace FuzzyLogic
             for (int i = 0; i < thisRows; i++)
                 for (int j = 0; j < mCol; j++)
                     for (int k = 0; k < thisCol; k++)
-                        C[i][j] += A[i][k] * B[k][j];
+                        C1[i,j] += A[i][k] * B[k][j];
+
+            C = Matrix.ToJagged<double>(C1);
 
             return new Matrix(C);
         }
@@ -76,7 +77,7 @@ namespace FuzzyLogic
                 if ((Arr[i].getMatrix().Length != rows) || (Arr[i].getMatrix()[0].Length != cols))
                     throw new Exception("Incorrect size of matrix");
 
-            double[,] min = new double[rows, cols];
+            double[,] min = new double[rows,cols];
             for (int i = 0; i < rows; i++)
                 for (int j = 0; j < cols; j++)
                     min[i,j] = Double.MaxValue;
@@ -86,14 +87,10 @@ namespace FuzzyLogic
                     for (int k = 0; k < Arr.Length; k++)
                         if (Arr[k].getMatrix()[i][j] < min[i,j])
                             min[i,j] = Arr[k].getMatrix()[i][j];
-
+            
             double[][] minJ;
-
-            minJ = min.Cast<double>().ToArray()
-                        .Select((it, ix) => new { item = it, index = ix })
-                        .GroupBy(it => it.index / (min.GetUpperBound(0) + 1), it => it.item)
-                        .Select(it => it.ToArray()).ToArray();
-
+            minJ = Matrix.ToJagged<double>(min);
+            
             return new Matrix(minJ);
         }
 
@@ -115,5 +112,19 @@ namespace FuzzyLogic
             }
             Console.WriteLine();
         }
+        public static T[][] ToJagged<T>(T[,] array)
+        {
+            var result = new T[array.GetLength(0)][];
+            for (int i = 0; i < result.Length; i++)
+            {
+                result[i] = new T[array.GetLength(1)];
+                for (int j = 0; j < result[i].Length; j++)
+                {
+                    result[i][j] = array[i, j];
+                }
+            }
+            return result;
+        }
+
     }
 }

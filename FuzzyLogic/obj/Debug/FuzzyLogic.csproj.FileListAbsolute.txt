@@ -10,3 +10,9 @@ C:\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.pdb
 C:\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.exe
 C:\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.pdb
 C:\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.csprojResolveAssemblyReference.cache
+D:\Repository\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.exe.config
+D:\Repository\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.exe
+D:\Repository\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.pdb
+D:\Repository\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.exe
+D:\Repository\FuzzyLogic\FuzzyLogic\bin\Debug\FuzzyLogic.pdb
+D:\Repository\FuzzyLogic\FuzzyLogic\obj\Debug\FuzzyLogic.csprojResolveAssemblyReference.cache

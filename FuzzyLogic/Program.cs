@@ -15,7 +15,7 @@ namespace FuzzyLogic
     {
         static void Main(string[] args)
         {
-            double[][] u = 
+            double[][] u =
             {
                 new[] {0.8, 0.6, 0.5, 0.1, 0.3},
                 new[] {0.5, 1, 0, 0.5, 1},
@@ -64,7 +64,7 @@ namespace FuzzyLogic
 
             public override double getY(double x)
             {
-                return Math.Sqrt(Math.Pow(x, 2));
+                return Math.Round(Math.Sqrt(Math.Pow(x, 3)), 2);
             }
         }
 

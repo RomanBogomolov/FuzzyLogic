@@ -105,7 +105,7 @@ namespace FuzzyLogic
 
         private double[] getX()
         {
-            double[] temp = new double[Variables.SIZE_OF_D];
+            double[] temp = new double [Variables.SIZE_OF_D];
             for (int i = 0; i < temp.Length; i++)
                 temp[i] = Variables.STEP_OF_D * i;
             return temp;
